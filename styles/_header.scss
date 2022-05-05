@@ -1,0 +1,85 @@
+header {
+    background-image: url(../images/bg-pattern-intro-mobile.svg), linear-gradient(270deg, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 0.9));
+    background-position: top 35% left 35%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 5em;
+    @media (min-width: 62em) {
+        background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(270deg, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 0.9));
+        background-position: top 52% left 25%;
+        border-bottom-left-radius: 0;
+        max-height: 80vh;
+    }
+    nav {
+        padding: 2rem;
+        @media (min-width: 62em) {
+            padding: 4rem 6rem 2rem;
+        }
+        .navbar-list {
+            ul {
+                list-style: none;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+        .auth {
+            .secondarybtn {
+                color: $colorWhite;
+                font-weight: bold;
+                background-color: transparent;
+            }
+            .primarybtn {
+                background-color: $colorWhite;
+                color: $colorLightred;
+                font-weight: bold;
+                &:hover {
+                    background: $colorVerylightred;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+    .intro {
+        padding: 1rem 1rem 4rem;
+        @media (min-width: 62em) {
+            padding: 4rem;
+        }
+        .intro-desc {
+            h1 {
+                font-size: 2.2rem;
+                color: $colorWhite;
+                @media (min-width: 62em) {
+                    font-size: 3.5rem;
+                }
+            }
+            p {
+                font-size: 1.2rem;
+                color: $colorGrayishblue;
+            }
+        }
+        .intro-cta {
+            .primarybtn {
+                color: $colorLightred;
+                font-weight: bold;
+                background-color: $colorWhite;
+                transition: 0.5s;
+                &:hover {
+                    background: $colorVerylightred;
+                    color: $colorWhite;
+                }
+            }
+            .secondarybtn {
+                color: $colorWhite;
+                font-weight: bold;
+                background-color: transparent;
+                &:hover {
+                    background-color: $colorWhite;
+                    color: $colorLightred;
+                }
+            }
+        }
+    }
+}

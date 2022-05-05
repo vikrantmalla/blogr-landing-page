@@ -1,0 +1,44 @@
+.state-art {
+    margin-top: 15rem;
+    background-image: url(../images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-position: top 1800% left 55%;
+    background-repeat: no-repeat;
+    background-size: 150%, auto;
+    border-top-right-radius: 5em;
+    border-bottom-left-radius: 5em;
+    // position: relative;
+    @media (min-width: 62em) {
+        margin-top: 10rem;
+        background-position: top 80% left -65%;
+        background-size: initial;
+    }
+    .container {
+        display: grid;
+        @media (min-width: 62em) {
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            max-height: 60vh;
+        }
+        img {
+            margin-top: -190px;
+            @media (min-width: 62em) {
+                margin-top: -50px;
+                margin-bottom: -90px;
+            }
+        }
+    }
+    .text {
+        padding: 0 2rem 6rem;
+        @media (min-width: 62em) {
+            padding: 0;
+        }
+        h2 {
+            font-size: 2rem;
+            color: $colorWhite;
+        }
+        p {
+            color: $colorGrayishblue;
+        }
+    }
+}

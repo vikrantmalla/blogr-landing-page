@@ -1,0 +1,34 @@
+footer {
+    background-color: $colorVerydarkblackblue;
+    border-top-right-radius: 5rem;
+    .container {
+        margin: 0;
+        padding: 3rem 1rem;
+        @media (min-width: 62em) {
+            padding: 4rem;
+        }
+        div {
+            h3 {
+                color: $colorWhite;
+                font-size: 1rem;
+            }
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 0.5rem;
+                    a {
+                        text-decoration: none;
+                        color: $colorGrayishblue;
+                        font-size: 1rem;
+                        @media (min-width: 62em) {
+                            font-size: 0.9rem;
+                        }
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

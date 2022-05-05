@@ -1,0 +1,28 @@
+.introducing {
+    margin: 5rem 0;
+    overflow-x: clip;
+    @media (min-width: 62em) {
+        margin: 15rem 0;
+    }
+    h1 {
+        @media (min-width: 62em) {
+            margin: 5rem 0 2rem 0;
+        }
+    }
+    .container {
+        display: grid;
+        place-items: center;
+        gap: 2rem;
+        .img-holder {
+            @media (min-width: 62em) {
+                position: relative;
+                right: -300px;
+                transform: scale(1.6);
+                order: 1;
+            }
+        }
+        @media (min-width: 62em) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
