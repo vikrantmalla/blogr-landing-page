@@ -16,34 +16,48 @@
 
 <body>
     <header>
-        <nav class="d-flex justify-content-between align-items-center mb-5">
-            <div class="d-flex flex-row justify-content-between align-items-center gap-5">
-                <img src="images/logo.svg" alt="logo">
-                <div class="navbar-list d-none d-lg-block" id="navbar-list">
-                    <ul class="navbar_link d-flex flex-row justify-content-between align-items-center gap-4 m-0 p-0" id="navbar-menu">
-                        <li class="navbar__list__item">
-                            <a href="#">Product
-                            <img class="arrow-icon" src="images/icon-arrow-light.svg" alt="Arrow down">
-                            </a>
-                        </li>
-                        <li class="navbar__list__item">
-                            <a href="#">Company
-                            <img class="arrow-icon" src="images/icon-arrow-light.svg" alt="Arrow down">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Connect
-                                <img class="arrow-icon" src="images/icon-arrow-light.svg" alt="Arrow down">
-                            </a>
-                        </li>
-                    </ul>
+        <nav class="d-flex flex-row justify-content-between justify-content-lg-start align-items-center">
+            <img src="images/logo.svg" alt="logo">
+            <div id="navbar-menu">
+                <div class="navbar-list d-lg-flex flex-lg-row justify-content-lg-between align-items-lg-center " id="navbar-list">
+                    <div class="nav-list d-flex flex-column flex-lg-row justify-content-center justify-content-between align-items-center gap-lg-4">
+                        <div class="nav__dropdown" id="nav-item-1" onclick="nav1Fun()">
+                            <span class="nav-name d-block text-center">Product</span>
+                            <ul class="nav__dropdown-menu" id="nav__dropdown-1">
+                                <li class="nav__dropdown-item text-center text-lg-start">Overview</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Pricing</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Marketplace</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Features</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Integrations</li>
+                            </ul>
+                        </div>
+                        <div class="nav__dropdown" id="nav-item-2" onclick="nav2Fun()">
+                            <span class="nav-name d-block text-center">Company</span>
+                            <ul class="nav__dropdown-menu" id="nav__dropdown-2">
+                                <li class="nav__dropdown-item text-center text-lg-start">About</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Team</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Blog</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Careers</li>
+                            </ul>
+                        </div>
+                        <div class="nav__dropdown" id="nav-item-3" onclick="nav3Fun()">
+                            <span class="nav-name d-block text-center">Connect</span>
+                            <ul class="nav__dropdown-menu" id="nav__dropdown-3">
+                                <li class="nav__dropdown-item text-center text-lg-start">Content</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">Newsletter</li>
+                                <li class="nav__dropdown-item text-center text-lg-start">LinkedIn</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="auth d-flex flex-column flex-lg-row gap-0 gap-lg-4">
+                        <button class="secondarybtn px-3 py-2 border-0">Login</button>
+                        <button class="primarybtn px-3 py-2 rounded-pill border-0">Sign Up</button>
+                    </div>
                 </div>
             </div>
-            <img class="d-lg-none" src="images/icon-hamburger.svg" alt="hamburger">
-            <div class="auth d-none d-lg-block">
-                <button class="secondarybtn px-3 py-2 border-0">Login</button>
-                <button class="primarybtn px-3 py-2 rounded-pill border-0 me-4">Sign Up</button>
-            </div>
+            <button class="mobile-show bg-transparent border-0" id="toggle">
+              <img class="hamburger-icon d-lg-none" id="hamburger-icon" src="images/icon-hamburger.svg" alt="hamburger">
+            </button>
         </nav>
         <section class="intro d-flex flex-column justify-content-center align-items-center ">
             <div class="intro-desc text-center mb-4 px-2 px-lg-0">
@@ -164,6 +178,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

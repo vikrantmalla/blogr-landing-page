@@ -10,36 +10,132 @@ header {
         max-height: 80vh;
     }
     nav {
+        gap: 3rem;
         padding: 2rem;
         @media (min-width: 62em) {
+            padding: 0 200px;
             padding: 4rem 6rem 2rem;
         }
         .navbar-list {
-            ul {
-                list-style: none;
-                li {
-                    a {
-                        text-decoration: none;
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 10%;
+            right: 10%;
+            background-color: $colorWhite;
+            color: black;
+            height: auto;
+            width: 80vw;
+            border-radius: 10px;
+            padding: 1rem 0;
+            z-index: 5;
+            @media (min-width: 62em) {
+                background-color: transparent;
+                position: initial;
+                width: 70vw;
+            }
+            .nav__dropdown {
+                margin-right: 0 !important;
+                padding: 10px 0;
+                @media (min-width: 62em) {
+                    display: inline;
+                    margin-right: 50px;
+                    opacity: 0.9;
+                    cursor: pointer;
+                    position: relative;
+                }
+                span {
+                    color: $colorVerydarkblackblue;
+                    font: bold;
+                    &::after {
+                        content: url(../images/icon-arrow-dark.svg);
+                        position: relative;
+                        left: 5px;
+                    }
+                    &.opened {
+                        &::after {
+                            transform: rotate(180deg);
+                            display: inline-block;
+                            top: 3px;
+                        }
+                    }
+                    @media (min-width: 62em) {
                         color: $colorWhite;
+                        &::after {
+                            content: url(../images/icon-arrow-light.svg);
+                        }
+                    }
+                }
+                .nav__dropdown-menu {
+                    display: none;
+                    position: unset;
+                    box-shadow: none;
+                    width: 100%;
+                    background-color: #f1f1f1ff;
+                    border-radius: 0;
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 1rem;
+                    &.opened {
+                        display: block;
+                    }
+                    @media (min-width: 62em) {
+                        position: absolute;
+                        background-color: $colorWhite;
+                        color: $colorVerydarkblackblue;
+                        z-index: 1;
+                        border-radius: 10px;
+                        transition: 0.5s;
+                        width: 140px;
+                    }
+                    .nav__dropdown-item {
+                        padding: 1rem 2rem;
+                        width: 250px;
+                        @media (min-width: 62em) {
+                            width: initial;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+            .auth {
+                border-top: 1px solid $colorGrayishblue;
+                margin: 0 1rem;
+                @media (min-width: 62em) {
+                    border-top: 0;
+                    margin: 0;
+                }
+                .secondarybtn {
+                    color: $colorVerydarkblackblue;
+                    font-weight: bold;
+                    background-color: transparent;
+                    width: 50%;
+                    margin: auto;
+                    @media (min-width: 62em) {
+                        color: $colorWhite;
+                        width: initial;
+                    }
+                }
+                .primarybtn {
+                    background-color: $colorVerylightred;
+                    color: $colorWhite;
+                    font-weight: bold;
+                    width: 50%;
+                    margin: auto;
+                    @media (min-width: 62em) {
+                        background-color: $colorWhite;
+                        color: $colorLightred;
+                        width: initial;
+                        &:hover {
+                            background: $colorVerylightred;
+                            color: $colorWhite;
+                        }
                     }
                 }
             }
         }
-        .auth {
-            .secondarybtn {
-                color: $colorWhite;
-                font-weight: bold;
-                background-color: transparent;
-            }
-            .primarybtn {
-                background-color: $colorWhite;
-                color: $colorLightred;
-                font-weight: bold;
-                &:hover {
-                    background: $colorVerylightred;
-                    color: $colorWhite;
-                }
-            }
+        .d-show {
+            display: block;
         }
     }
     .intro {
